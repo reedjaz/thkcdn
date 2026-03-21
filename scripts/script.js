@@ -22,6 +22,28 @@ $(document).ready(function () {
         }
     });
 
+    var portoSwiper = new Swiper('.porto-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grabCursor: true,
+        pagination: {
+            el: '.porto-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.porto-button-next',
+            prevEl: '.porto-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            }
+        }
+    });
+
     // Simulasi submit form
     $('#contactForm').on('submit', function (e) {
         e.preventDefault();
